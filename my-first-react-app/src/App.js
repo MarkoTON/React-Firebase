@@ -5,8 +5,14 @@ function App() {
   const [name, setName] = useState('mario')
 
   const handleClick = () => {
-    setName('luigi')
+    console.log('---1---');
     console.log(name)
+    console.log('---2---');
+    setName('luigi')
+    console.log(setName('luigi'));
+    console.log('---3---');
+    console.log(name)
+    console.log('---4---');
   }
 
   return (
