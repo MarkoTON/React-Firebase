@@ -8,8 +8,12 @@ function App() {
     {title: "race on moo moo farm", id: 3}
   ])
 
-  const handleClick = (id) => {
-    setEvents(prevEvents => {
+  const handleClick = (e,id) => {
+    console.log(e)
+    console.log(id)
+    setEvents((prevEvents, next) => {
+      console.log(prevEvents)
+      console.log(next)
       return prevEvents.filter(event => id !== event.id)
     })
   }
@@ -19,7 +23,7 @@ function App() {
       {events.map((event, index) => (
         <div key={event.id}>
           <h2>{index} - {event.title}</h2>
-          <button onClick={() => handleClick(event.id)}>delete event</button>
+          <button onClick={(e) => handleClick(e.target,event.id)}>delete event</button>
         </div>
       ))}
     </div>
