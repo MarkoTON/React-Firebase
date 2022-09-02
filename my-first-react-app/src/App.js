@@ -14,6 +14,10 @@ function App() {
     setEvents(prevEvents => {
       return [...prevEvents, event]  
     })
+
+    // setEvents(() => {
+    //   return [...events, event]  
+    // })
     setShowModal(false)
   }
 
