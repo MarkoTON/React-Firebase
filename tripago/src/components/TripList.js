@@ -10,7 +10,8 @@ export default function TripList() {
     fetch('http://localhost:3000/trips')
       .then(response => response.json())
       .then(json => setTrips(json))
-  }, [])
+  // }, [!trips])
+  }, []) // Ovako ce samo jednom da radi, tako da ne moramo da ubacujemo neki uslov
 
   return (
     <div className="trip-list">
