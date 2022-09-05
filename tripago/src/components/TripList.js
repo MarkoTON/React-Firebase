@@ -4,6 +4,7 @@ import './TripList.css'
 
 export default function TripList() {
   const [url, setUrl] = useState('http://localhost:3000/trips')
+  // data je ime iz useFatch, dok je trips novo ime koje mi koristimo
   const { data: trips } = useFetch(url)
   
   return (
