@@ -17,8 +17,15 @@ function App() {
   // shuffle cards for new game
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
-      .sort(() => Math.random() - 0.5)
-      .map(card => ({ ...card, id: Math.random() }))
+      .sort(() => {
+        return Math.random() - 0.5
+      })
+      .map(card => {
+        console.log(card)
+        let rand = { ...card, id: Math.random() }
+        console.log(rand)
+        return (rand)
+      })
       
     setCards(shuffledCards)
     setTurns(0)
