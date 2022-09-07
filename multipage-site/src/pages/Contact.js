@@ -2,10 +2,12 @@ import { useLocation } from "react-router-dom"
 
 export default function Contact() {
   const queryString = useLocation().search
-  // console.log(queryString)
+  console.log(queryString)
   
   const queryParams = new URLSearchParams(queryString)
+  console.log(queryParams)
   const name = queryParams.get("name")
+  console.log(name)
   
   return (
     <div>
