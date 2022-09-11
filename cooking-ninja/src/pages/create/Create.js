@@ -10,6 +10,7 @@ export default function Create() {
   // Ingredient
   const [newIngredient, setNewIngredient] = useState('')
   const [ingredients, setIngredients] = useState([])
+  // Sluzi samo da bi se element ponovo fokusirao. To je moglo da se odradi i uz pomoc document.getElementById('...').focus()
   const ingredientInput = useRef(null)
   
   const handleSubmit = (e) => {
