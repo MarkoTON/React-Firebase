@@ -7,10 +7,14 @@ import './Search.css'
 
 export default function Search() {
   const queryString = useLocation().search
+  console.log(queryString)
   const queryParams = new URLSearchParams(queryString)
+  console.log(queryParams)
   const query = queryParams.get('q')
+  console.log(query)
 
   const url = 'http://localhost:3000/recipes?q=' + query
+  console.log(url)
   const { error, isPending, data } = useFetch(url)
 
   return (
