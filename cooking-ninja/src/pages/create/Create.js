@@ -22,8 +22,11 @@ export default function Create() {
     e.preventDefault()
     const ing = newIngredient.trim()
 
+    // Unutar array-a proverava da li sadrzi novi koji je dodao
     if (ing && !ingredients.includes(ing)) {
-      setIngredients(prevIngredients => [...prevIngredients, newIngredient])
+      setIngredients(prevIngredients => {
+        return [...prevIngredients, newIngredient]
+      })
     }
     setNewIngredient('')
     ingredientInput.current.focus()
