@@ -8,6 +8,9 @@ import Searchbar from './Searchbar'
 
 export default function Navbar() {
   const { color } = useContext(ThemeContext)
+  // console.log(color)
+  // let dataGGGGGG = useContext(ThemeContext)
+  // console.log(dataGGGGGG)
 
   return (
     <div className="navbar" style={{ background: color }}>
