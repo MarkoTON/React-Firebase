@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <h1>My name is {name}</h1>
-      <button onClick={handleClick}>Change name</button>
+      <button onClick={(e) =>  handleClick()}>Change name</button>
     </div>
   );
 }
