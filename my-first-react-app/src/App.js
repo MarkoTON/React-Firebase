@@ -20,15 +20,18 @@ function App() {
     })
   }
 
-  // const handleAdd = (e) => {
-  //   setName(e.target.value)
-  //   setEvents({...events,title:name, id: id++})
-  // }
+  const handleAdd = () => {
+    setEvents((prevEvents, newEvents)=> {
+      console.log(prevEvents)
+      console.log(newEvents)
+      return [...prevEvents, {title:'Some random added title', id: 5}]
+    })
+  }
 
   return (
     <div className="App">
-      {/* <input type="text" value={name} />
-      <button onClick={(e)=> handleAdd(e)} >Add</button> */}
+      {/* <input type="text" value={name} /> */}
+      <button onClick={(e)=> handleAdd()} >Add</button>
       {showEvents && (
         <div>
           <button onClick={() => setShowEvents(false)}>Hide Events</button>
