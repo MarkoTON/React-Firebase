@@ -11,9 +11,11 @@ function App() {
   const handleClick = (e,id) => {
     console.log(e)
     console.log(id)
-    setEvents((prevEvents, next) => {
+    setEvents((prevEvents, next, k) => {
       console.log(prevEvents)
       console.log(next)
+      console.log('==============')
+      console.log(k)
       return prevEvents.filter(event => id !== event.id)
     })
   }
