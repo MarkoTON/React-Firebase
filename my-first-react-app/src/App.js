@@ -32,6 +32,9 @@ function App() {
     <div className="App">
       {/* <input type="text" value={name} /> */}
       <button onClick={(e)=> handleAdd()} >Add</button>
+      
+      <hr />
+
       {showEvents && (
         <div>
           <button onClick={() => setShowEvents(false)}>Hide Events</button>
@@ -40,6 +43,18 @@ function App() {
       {!showEvents && (
         <div>
           <button onClick={() => setShowEvents(true)}>Show Events</button>
+        </div>
+      )}
+
+      <hr />
+
+      {!showEvents ? (
+        <div>
+          <button onClick={() => setShowEvents(true)}>Show Events</button>
+        </div>
+      ): (
+        <div>
+          <button onClick={() => setShowEvents(false)}>Hide Events</button>
         </div>
       )}
       
