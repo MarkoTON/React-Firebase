@@ -8,7 +8,7 @@ export default function Modal({ children, handleClose, isSalesModal }) {
   return ReactDOM.createPortal((
     <div className="modal-backdrop">
       <div className="modal" style={inlineStyle}>
-
+        {/* children je ustvari - NewEventForm  */}
         {children}
         <hr />
         <i>Button is comming from modal. And Form from NewEventForm that is insert over children in App.js!!!</i>
