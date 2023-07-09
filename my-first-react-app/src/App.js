@@ -47,7 +47,7 @@ function App() {
       
       {showModal && (
         <Modal>
-          <NewEventForm addEvent={addEvent} />
+          <NewEventForm addEventFromNewEventForm={addEvent} />
         </Modal>
       )}
 
