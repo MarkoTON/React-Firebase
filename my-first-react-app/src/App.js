@@ -21,7 +21,9 @@ function App() {
 
   return (
     <div className="App">
-      <Title title="Marioland Events" subtitle={subtitle} />
+      <Title title="Marioland Events" subtitle={subtitle} >
+        <strong>Metallica</strong>
+      </Title>
       
       {showEvents && (
         <div>

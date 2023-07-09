@@ -1,6 +1,7 @@
 import './Modal.css'
 
 export default function Modal({ children }) {
+  console.log(children)
   console.log(children[2].props.children)
   return (
     <div className="modal-backdrop">
