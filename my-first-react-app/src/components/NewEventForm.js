@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './NewEventForm.css'
 
 export default function NewEventForm() {
-  const [title, setTitle] = useState('')
+  const [title, setTitle] = useState('Marko')
   const [date, setDate] = useState('')
 
   const resetForm = () => {
