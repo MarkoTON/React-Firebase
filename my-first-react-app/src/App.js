@@ -13,7 +13,9 @@ function App() {
     {title: "race on moo moo farm", id: 3}
   ])
 
-  const handleClick = (id) => {
+  const handleClick = (id, event) => {
+    console.log(id);
+    console.log(event);
     setEvents(prevEvents => {
       return prevEvents.filter(event => id !== event.id)
     })
@@ -39,6 +41,8 @@ function App() {
           <button onClick={() => setShowEvents(true)}>Show Events</button>
         </div>
       )}
+      {showEvents && <EventList events={events} handleClick={(e) => handleClick(e)} />}
+      <hr />
       {showEvents && <EventList events={events} handleClick={handleClick} />}
 
       {showModal && (
