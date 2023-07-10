@@ -11,7 +11,7 @@ export const useFetch = (url) => {
       try {
         const res = await fetch(url)
         if(!res.ok) {
-          throw new Error(res.statusText)
+          throw new Error(res.statusText, url)
         }
         const data = await res.json()
 
@@ -21,7 +21,9 @@ export const useFetch = (url) => {
       } catch (err) {
         setIsPending(false)
         setError('Could not fetch the data')
-        console.log(err.message)
+        console.table(err)
+        console.table(err.message)
+        console.table(url)
       }
       
     }
