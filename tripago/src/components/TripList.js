@@ -7,9 +7,11 @@ export default function TripList() {
   console.log(trips)
 
   useEffect(() => {
+    console.log('First clg');
     fetch('http://localhost:3000/trips')
       .then(response => response.json())
       .then(json => setTrips(json))
+    console.log('Second clg');
   // }, [!trips])
   }, []) // Ovako ce samo jednom da radi, tako da ne moramo da ubacujemo neki uslov
 
