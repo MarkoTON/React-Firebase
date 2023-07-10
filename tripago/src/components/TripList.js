@@ -4,14 +4,15 @@ import './TripList.css'
 
 export default function TripList() {
   const [url, setUrl] = useState('http://localhost:3000/trips')
-  const { data: trips, isPending } = useFetch(url)
+  const { data: trips, isPending: pending } = useFetch(url)
   
   return (
     <div className="trip-list">
       <h2>Trip List</h2>
-      {isPending && <div>Loading trips...</div>}
+      {pending && <div>Loading trips...</div>}
       <ul>
-        {trips && trips.map(trip => (
+        {/* Adding 'pending' to remove error from console.  */}
+        {trips && !pending && trips.map(trip => (
           <li key={trip.id}>
             <h3>{trip.title}</h3>
             <p>{trip.price}</p>
