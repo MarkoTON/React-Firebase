@@ -13,6 +13,8 @@ export const useFetch = (url) => {
       
       try {
         const res = await fetch(url, { signal: controller.signal })
+        console.log(controller);
+        console.log(controller.signal);
         if(!res.ok) {
           throw new Error(res.statusText)
         }
