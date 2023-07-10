@@ -9,13 +9,13 @@ export default function TripList() {
     const response = await fetch(url)
     const trips = await response.json()
     setTrips(trips)
-
+    console.log(' fetchtrips ')
   }, [url])
 
   useEffect(() => {
-    console.log('useEffect function ran')
+    console.log('useEffect function ran 1')
     fetchTrips()
-
+    console.log('useEffect function ran 2')
   }, [fetchTrips])
 
   return (
