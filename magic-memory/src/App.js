@@ -16,17 +16,16 @@ function App() {
 
   // shuffle cards for new game
   const shuffleCards = () => {
-    const shuffledCards = [...cardImages, ...cardImages]
-      .sort(() => {
-        return Math.random() - 0.5
-      })
-      .map(card => {
-        console.log(card)
-        let rand = { ...card, id: Math.random() }
-        console.log(rand)
-        return (rand)
-      })
-      
+    // Duble card, random sort, add random id and return to 'shuffledCards'
+    const shuffledCards = [...cardImages, ...cardImages].sort(() => {
+      return Math.random() - 0.5
+    }).map(card => {
+      console.log(card)
+      let rand = { ...card, id: Math.random() }
+      console.log(rand)
+      return (rand)
+    })
+
     setCards(shuffledCards)
     setTurns(0)
   }
@@ -36,7 +35,7 @@ function App() {
   return (
     <div className="App">
       <h1>Magic Match</h1>
-      <button onClick={shuffleCards}>New Game</button>
+      <button onClick={()=> shuffleCards()}>New Game</button>
     </div>
   );
 }
