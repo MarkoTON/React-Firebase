@@ -13,6 +13,7 @@ import './App.css'
 function App() {
   return (
     <div className="App">
+      <hr />
       <BrowserRouter>
       <Navbar />
         <Switch>
@@ -30,6 +31,7 @@ function App() {
           </Route>
         </Switch>
       </BrowserRouter>
+      <hr />
     </div>
   );
 }
