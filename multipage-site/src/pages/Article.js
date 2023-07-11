@@ -12,6 +12,7 @@ export default function Article() {
     if (error) {
       setTimeout(() => {
         // history.goBack()
+        console.log(history);
         history.push('/')
       }, 2000)
     }
