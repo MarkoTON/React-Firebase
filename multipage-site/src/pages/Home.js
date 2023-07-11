@@ -11,7 +11,7 @@ export default function Home() {
       <h2>Articles</h2>
       {isPending && <div>Loading...</div>}
       {error && <div>{error}</div>}
-      {articles && articles.map(article => (
+      {articles && !isPending && articles.map(article => (
         <div key={article.id} className="card">
           <h3>{article.title}</h3>
           <p>Written by {article.author}</p>
